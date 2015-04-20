@@ -172,23 +172,56 @@ Um unsere Messdaten auswerten zu können, sind zunächst einige theoretische Vor
 
 Zeichnerisch lassen sich die erlaubten Übergänge unter Berücksichtung der Auswahlregeln in folgenden Termschemata darstellen:
 
-Die $g_{eff}$-Werte lassen sich leicht gemäß $g_{eff} = g_J M_J - g_J' M_J'$ berechnen und sind in folgenden Tabellen für jeden Übergang dargestellt, jeweils unterteilt in die möglichen Werte von $\Delta m_J$, also für die Änderung der magnetischen Gesamtdrehimpulsquantenzahl, die die möglichen Raumrichtungen des Drehimpulses angibt.
+\begin{figure}[H] 
+  \centering
+     \includegraphics[width=1\textwidth]{data/Termschemata.JPG}
+  \caption{Termschemata für alle drei Übergänge, oben sind jeweils die Wellenlängen eingeschrieben; verschiedene $\Delta m_J$ sind farblich gekennzeichnet. Verbotene Übergänge sind gestrichelt eingezeichnet.}
+  \label{fig:Bild1}
+\end{figure}
+
+Die $g_{eff}$-Werte lassen sich leicht gemäß $g_{eff} = g_J M_J - g_J' M_J'$ berechnen und sind in folgenden Tabellen für jeden Übergang dargestellt, jeweils unterteilt in die möglichen Werte von $\Delta m_J$, also für die Änderung der magnetischen Gesamtdrehimpulsquantenzahl, die die möglichen Raumrichtungen des Drehimpulses angibt. Zunächst für 405 nm (hier ergeben sich drei Linien):
 
 \begin{center}
   \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
     \hline
-    $\Delta m_J$ & $m_J$ & $m_J´$ & $g_{eff}$ \\ \hline
-    1               & 140                                        &  &  \\ \hline
-    2               & 140                                        &  &  \\ \hline
-    3               & 170                                        &  &  \\ \hline
-    4               & 170                                        &  &  \\ \hline
-    5               & 170 (Selbst getempert)                     &  &  \\ \hline
-    6               & 170 (Selbst getempert)                     &  &  \\ \hline
-    7               & 200                                        &  &  \\ \hline
-    8               & 200                                        &  &  \\ \hline
-    9               & 215                                        &  &  \\ \hline
-    10              & 215                                        &  &  \\ \hline
+    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
+    1               & -1               & 0 &  \\ \hline
+    0               & 0                & 0 &  \\ \hline
+    -1              & 1                & 0 &  \\ \hline
 	\end{tabular}
+\end{center}
+
+Für 436 nm sind es 6 Linien:
+
+\begin{center}
+  \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+    \hline
+    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
+    1               & -1               & 0 & -2 \\ \hline
+    1               & 0                & 1 & $-\frac{3}{2}$ \\ \hline
+    0               & -1               & -1 & $-\frac{1}{2}$ \\ \hline
+    0               & 1                & 1 & $\frac{1}{2}$ \\ \hline
+   -1               & 0                & -1 & $\frac{3}{2}$ \\ \hline    
+   -1               & 1                & 0 & 2 \\ \hline
+    \end{tabular}
+\end{center}
+
+Für 546 nm ergeben sich sogar 9 Linien:
+
+\begin{center}
+  \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+    \hline
+    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
+    1               & -1               & 0 & -2 \\ \hline
+    1               & 0                & 1 & $-\frac{3}{2}$ \\ \hline
+    1               & 1                & 2 & -1 \\ \hline
+    0               & -1               & -1 & $-\frac{1}{2}$ \\ \hline
+    0               & 0                & 0 & 0 \\ \hline
+    0               & 1                & 1 & $\frac{1}{2}$ \\ \hline
+    -1              & -1               & -2 & 1 \\ \hline
+    -1              & 0                & -1 & $\frac{3}{2}$ \\ \hline
+    -1              & 1                & 0 & 2 \\ \hline
+    \end{tabular}
 \end{center}
 
 \section{Bestimmung des Bohrschen Magnetons}
