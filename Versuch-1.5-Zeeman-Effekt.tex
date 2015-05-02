@@ -106,27 +106,177 @@
 \tableofcontents
 
 %ANFANG INHALT
-
 \chapter{Einleitung}
 
+
 \chapter{Grundlagen}
+
+
 \section{Fabry-Pérot-Interferometer}
 
-% \begin{figure}[h] 
-%   \centering
-%      \includegraphics[width=0.7\textwidth]{img/...}
-%   \caption{...}
-%   \label{fig:...}
-% \end{figure}
+\begin{figure}[H] 
+  \centering
+     \includegraphics[width=0.4\textwidth]{data/Fabry.jpg}
+  \caption{Strahlengang im Fabry-Pérot-Interferometer.}
+  \label{fig:Bild1}
+\end{figure}
+
+Das Fabry-Pérot-Interferometer wird in diesem Versuch genutzt, um
+Aussagen über die Frequenz von elektromagnetischer Strahlung zu machen.
+Es besteht aus zwei parallelen Spiegeln mit hoher Reflektivität, welche
+im Abstand $d$ zu einander angeordnet sind. Im Zwischenraum befindet
+sich Luft. \\
+Betrachtet man einen einfallenden Lichtstrahl im Winkel $\alpha$ zur
+Spiegelnormalen, so wird ein Teil davon durch beide Spiegel transmittiert,
+wohingegen ein anderer Teil einmal an beiden Spiegeln reflektiert
+und dann erst durch den zweiten Spiegel hindurchgelassen wird. Obwohl
+es auch noch Strahlen gibt, die viel öfter zwischen den Spiegeln hin
+und her reflektiert werden, betrachten wir erst einmal diese beiden
+Teilstrahlen. Nach dem Austritt aus dem zweiten Spiegel haben sie
+einen Gangunterschied von $s=2a-b=2dcos\alpha$. Ist $s=n\lambda$,
+also ein ganzzahliges Vielfaches der Wellenlänge, so tritt konstruktive
+Interferenz auf. \\
+Sei $\delta\alpha_{2}$ der Winkel zwischen zwei Interferenzordnungen,
+$\delta\alpha_{1}$ der Winkel zwischen zwei Spektrallinien der selben
+Interferenzordnung und $\triangle g_{eff}$ die $g_{eff}$-Differenz
+zwischen selbigen, so ergibt sich in der Nähe der höchsten Interferenzordnung
+folgender Zusammenhang mit dem Bohrschen Magneton:
+
+$$\mu_{B}=\frac{hc}{2dB}\frac{\delta\alpha_{1}}{\triangle g_{eff}\delta\alpha_{2}}$$
+
+Messtechnisch gibt man nun $\delta\alpha$ in Einheiten von $g_{eff}$
+an. Somit kürzt sich $\triangle g_{eff}$ und $\delta\alpha_{1}$
+heraus und man muss nur noch $\delta\alpha_{2}$ bestimmen. Das geht
+am einfachsten, wenn man das Magnetfeld so einstellt, dass sich die
+energetisch höchste/niedrigste Linie mit der niedrigsten/höchsten
+Linie der eins niedrigeren/höheren Ordnung überlappt. Denn genau dann
+gilt $\delta\alpha_{2}=$ $2g_{eff,MAX}$, wobei $g_{eff,MAX}$ das
+größtmögliche $g_{eff}$ eines Übergangs ist. 
+
 
 \section{Klassische Erklärung des Zeeman-Effekts}
+
+\begin{figure}[H] 
+  \centering
+     \includegraphics[width=0.6\textwidth]{data/Zerlegung.jpg}
+  \caption{Veränderung der Ionenoszillation durch ein äußeres Magnetfeld.}
+  \label{fig:Bild1}
+\end{figure}
+
+
+Nach der klassischen Theorie ist für die Emission eines Lichtquants
+die Oszillation eines geladenen Teilchens, eines Ions, verantwortlich.
+Wird zusätzlich dazu ein Magnetfeld angelegt (in z-Richtung), so wirkt
+auf das Ion die Lorentzkraft und es beginnt, mit der Lamorfrequenz
+$\omega_{L}$ um die z-Achse zu präzedieren. Während die z-Komponente
+der Oszillation des Ions unverändert bleibt, kommt es bei den Komponenten
+senkrecht zum Magnetfeld zu einer Kreisbewegung um die z-Achse, dessen
+Frequenz um $\omega_{L}$ einmal abgeschwächt und rechtsdrehend um
+die z-Achse und ein anderes mal verstärkt und linksdrehend zu beobachten
+ist. \\
+Man kann sich die Lichtemission nun vorstellen, wie einen Hertzschen
+Dipol, wobei das Ion die bewegte Ladung darstellt und der Dipol nur
+senkrecht zu dieser Bewegungsrichtung abstrahlt. \\
+Schaut man nun also transversal zum Magnetfeld auf das Teilchen, so
+wird man in Magnetfeldrichtung ($\pi$-Komponente) die vom Magnetfeld
+unabhängige emittierte Frequenz $\omega$ beobachten, senkrecht dazu
+jedoch die je um $\omega_{L}$ nach unten bzw. nach oben verschobenen
+Frequenzen der $\sigma^{-/+}$-Komponenten. In diesem Fall sind alle
+Komponenten linear polarisiert. \\
+Schaut man longitudinal zum Magnetfeld, sieht man nur die $\sigma^{-/+}$-Komponenten,
+welche jeweils zirkular polarisiert sind. 
+
+
 \section{Quantenmechanische Kopplungen im Atom}
+
+Betrachtet man ein Atom, wo wird es quantenmechanisch durch den Hamiltonoperator
+beschrieben:
+
+$$\hat{H}=\hat{T}+\hat{V}_{C}+\hat{V}_{ss}+\hat{V}_{ll}+\hat{V}_{ls}$$
+
+Er setzt sich zusammen aus $\hat{T}$, dem Operator der kinetischen
+Energie, $\hat{V}_{C}$, der Coulomb-Wechselwirkung und den magnetischen
+Wechselwirkungen $\hat{V}_{ss},\mbox{ }\hat{V}_{ll}\mbox{ und }\hat{V}_{ls}$.
+
+
 \subsection{LS-Kopplung}
+
+Ist $\hat{V}_{ls}$ viel kleiner als die beiden anderen mag. Wechselwirkungen,
+so koppeln die einzelnen Elektronenspins zu einem Gesamtspin $S=\sum s_{i}$
+und genauso die Elektronendrehimpulse zu einem Gesamtbahndrehimpuls
+$L=\sum l_{i}$. Diese koppeln dann zu einem Gesamtdrehimpuls $J=\left|L-S\right|,\mbox{ }\left|L-S\right|+1,\mbox{ ... }\left|L+S\right|$.\\
+Es ist üblich, den Zustand eines Atoms in der Notation nach Russel
+und Saunders anzugeben:
+
+$$^{(2S+1)}L_{J}$$
+
+
+
 \subsection{jj-Kopplung}
+
+Hier ist $\hat{V}_{ls}$ deutlich größer als die beiden anderen mag.
+Wechselwirkungen. Es koppeln Spin und Bahndrehimpuls eines Elektrons
+zu einem Gesamtdrehimpuls $j_{i}=l_{i}+s_{i}$ eines Elektrons. Diese
+koppeln dann zu einem Gesamtdrehimpuls des Atoms $J=\sum j_{i}$.
+
+
 \section{Quantenmechanische Erklärungen}
+
+Legt man ein Magnetfeld (in z-Richtung) an, so ergänzt sich der Hamiltonoperator
+eines Atoms um die magnetische Störung $\hat{H}_{B}=-\hat{\mu}\vec{B}$
+mit $\hat{\mu}=\underset{i}{\sum}(\hat{\mu}_{l_{i}}+\hat{\mu}_{s_{i}})=\underset{}{\frac{\mu_{B}}{\hslash}\underset{i}{\sum}(g_{L}\hat{l}_{i}+g_{S}\hat{s}_{i})}$,
+wobei für die Landéschen g-Faktoren gilt: $g_{L}=1$ und $g_{S}\thickapprox2$. 
+
+
 \subsection{Quantenmechanische Erklärung des Zeeman-Effekts}
+
+Beim Zeeman-Effekt ist das Magnetfeld klein im Vergleich zu den Wechselwirkungen
+im Atom. Das heißt, es kommt zur LS-Koppelung und der Hamiltonoperator
+der magnetischen Störung nimmt die Form $\hat{H}_{Ze}=\frac{\mu_{B}}{\hslash}g_{J}\hat{J}\vec{B}$
+an. Die Eigenwerte dieses Operators geben die Zeeman-Energien: $E_{Ze}=\mu_{B}Bg_{J}M_{J}$.
+Dabei ist $M_{J}$ die magnetische Quantenzahl. Für $g_{J}$ ergibt
+sich: $g_{J}=g_{L}+(g_{S}-g_{L})\frac{J(J+1)-L(L+1)+S(S+1)}{2J(J+1)}$.
+Für den Übergang von einem Niveau $a$ zum Niveau $a'$ ergibt sich
+somit eine Energiedifferenz von $\triangle E_{Ze}$: $\frac{\triangle E_{Ze}}{\mu_{B}B}=(g_{J}M_{J}-g_{J}'M_{J}')=g_{eff}$\\
+Betrachtet man einen Übergang von $S=0$ nach $S=0$, so handelt es
+sich um den normalen Zeeman-Effekt. Bei diesem vereinfacht sich $g_{eff}$
+zu $g_{L}\triangle M_{L}$.\\
+Vergleicht man nun mit der klassischen Erklärung, so entspricht die
+$\pi$-Komponente einem Übergang mit $\triangle M=0$ und die $\sigma^{+/-}$-Komponente
+einem Übergang mit $\triangle M=\pm1$. Das gilt auch für den nachfolgenden
+Paschen-Back-Effekt.
+
+
 \subsection{Quantenmechanische Erklärung des Paschen-Back-Effekts}
+
+Beim Paschen-Back-Effekt ist das angelegte Magnetfeld so groß, dass
+die Spin-Bahn-Wechselwirkung aufgehoben wird. Somit sind Gesamtspin
+und Gesamtbahndrehimpuls entkoppelt. Es kann sein, dass diese Entkopplung
+bei noch nicht so starkem Magnetfeld zunächst nur eines der am Übergang
+beteiligten Energieniveaus betrifft. Dann spricht man vom partiellen
+Paschen-Back-Effekt; andererseits vom vollständigen. Im Fall von Entkopplung
+gilt: $\hat{H}_{PB}=\frac{\mu_{B}}{\hslash}(g_{L}\hat{L}+g_{S}\hat{S})\vec{B}$
+und somit $E_{PB}=\mu_{B}B(g_{L}M_{L}+g_{S}M_{S})$.\\
+Im Falle des vollständigen Paschen-Back-Effekts kommt es zum selben
+$g_{eff}$, wie beim normalen Zeeman-Effekt (da $\triangle M_{S}=0$,
+siehe Auswahlregeln) und somit sind diese beiden Effekte aus spektroskopischer
+Sicht ununterscheidbar. 
+
+
 \section{Auswahlregeln für Dipolübergänge}
+
+Sind Gesamtbahndrehimpuls und Gesamtspin zum Gesamtdrehimpuls gekoppelt,
+wie beim Zeeman-Effekt, so gelten folgende Auswahlregeln:
+\begin{itemize}
+\item $\triangle J=0,\mbox{ }\pm1$
+\item $\triangle M_{J}=0$ (außer $\triangle J=\text{0}$), $\pm1$
+\end{itemize}
+Sind Gesamtbahndrehimpuls und Gesamtspin entkoppelt, wie beim Paschen-Back-Effekt,
+so gelten folgende Auswahlregen:
+\begin{itemize}
+\item $\triangle L=0,\mbox{ }\pm1$
+\item $\triangle M_{L}=0,\mbox{ }\pm1$
+\item $\triangle M_{S}=0$\end{itemize}
 
 \chapter{Durchführung}
 \section{Messung von $\frac{\delta\alpha_1}{\delta\alpha_2}$}
@@ -150,11 +300,11 @@
 \chapter{Auswertung}
 \section{Überprüfung der Vorhersagen der klassischen Erklärung}
 
-Zunächst betrachten wir den Fall des transversalen Zeemann-Effektes, also des senkrecht zur Blickrichtung ausgerichteten Magneten. In der Tat können wir, wenn der Linearpolarisator parallel zum Magnetfeld ausgerichtet ist, genau eine Spektrallinie beobachten, die bei geringfügiger Drehung des Linearpolarisators in beide Richtungen schwächer wird. Dies zeigt, dass lediglich parallel zum Magnetgeld polarisiertes Licht detektiert wird, was der Vorhersage des klassischen Modells entspricht. Wir sehen die $\pi$-Komponente, die in Richtung der z-Achse (also der Magnetfeldrichtung) schwingt und daher nicht vom Magnetfeld beeinflusst wird, also auch die gleiche Frequenz wie vorher besitzt.
+Zunächst betrachten wir den Fall des transversalen Zeeman-Effektes, also des senkrecht zur Blickrichtung ausgerichteten Magneten. In der Tat können wir, wenn der Linearpolarisator parallel zum Magnetfeld ausgerichtet ist, genau eine Spektrallinie beobachten, die bei geringfügiger Drehung des Linearpolarisators in beide Richtungen schwächer wird. Dies zeigt, dass lediglich parallel zum Magnetgeld polarisiertes Licht detektiert wird, was der Vorhersage des klassischen Modells entspricht. Wir sehen die $\pi$-Komponente, die in Richtung der z-Achse (also der Magnetfeldrichtung) schwingt und daher nicht vom Magnetfeld beeinflusst wird, also auch die gleiche Frequenz wie vorher besitzt.
 
 Bei senkrecht zum Magnetfeld ausgerichtetem Linearpolarisator sehen wir zwei Spektrallinien im gleichen Abstand links und rechts der ursprünglichen Linie (bzw. links und rechts der $\pi$-Komponente). Daraus folgt, dass die Frequenzen dieser beiden Linien um einen bestimmten Betrag verschoben sind. Weiterhin werden die Linien schwächer, wenn man den Polarisator von der senkrechten Position wegdreht. Wir sehen hier die $\sigma^+$- und $\sigma^-$-Komponenten, die in Richtung der x-Achse schwingen, also senkrecht zum Magnetgeld polarisiert sind und um Frequenzen $\pm \omega$ von der ursprünglichen Linie abweichen.
 
-Analog bestätigt sich das klassische Modell für den Fall des longitudinalen Zeemann-Effektes, bei dem mittels des $\frac{\lambda}{4}$-Plättchens, welches um 45$^{\circ}$ zum Linearpolarisator verdreht in den Strahlengang gebracht wird, nachgewiesen wird, dass lediglich zwei zirkular polarisierte Komponenten vorhanden sind, die entgegengesetzen Drehsinn besitzen und wiederum frequenzverschoben sind. Dies sind die $\sigma^+$- und $\sigma^-$-Komponenten, wobei die $\sigma^+$-Komponente einen mathematisch positiven Drehsinn besitzt. Dass die $\pi$-Komponente nicht sichtbar ist, erklärt sich dadurch, dass ein Hertzscher Dipol, als welchen wir das schwingende "`Ion"' betrachten, in Bewegungsrichtung nicht abstrahlt. Somit ist die klassische Vorhersage sowohl für den transversalen, als auch für den longitudinalen Zeemann-Effekt bestätigt.
+Analog bestätigt sich das klassische Modell für den Fall des longitudinalen Zeeman-Effektes, bei dem mittels des $\frac{\lambda}{4}$-Plättchens, welches um 45$^{\circ}$ zum Linearpolarisator verdreht in den Strahlengang gebracht wird, nachgewiesen wird, dass lediglich zwei zirkular polarisierte Komponenten vorhanden sind, die entgegengesetzen Drehsinn besitzen und wiederum frequenzverschoben sind. Dies sind die $\sigma^+$- und $\sigma^-$-Komponenten, wobei die $\sigma^+$-Komponente einen mathematisch positiven Drehsinn besitzt. Dass die $\pi$-Komponente nicht sichtbar ist, erklärt sich dadurch, dass ein Hertzscher Dipol, als welchen wir das schwingende "`Ion"' betrachten, in Bewegungsrichtung nicht abstrahlt. Somit ist die klassische Vorhersage sowohl für den transversalen, als auch für den longitudinalen Zeeman-Effekt bestätigt.
 
 \section{Überprüfung der Vorhersagen der quantenmechanischen Erklärung}
 
