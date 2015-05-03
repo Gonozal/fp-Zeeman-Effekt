@@ -1,108 +1,6 @@
-% Klassifiziert den Dokumenten-Typ
-% Doku: http://exp1.fkp.physik.tu-darmstadt.de/tuddesign/
-% Farben: http://www.tu-darmstadt.de/media/medien_stabsstelle_km/services/medien_cd/das_bild_der_tu_darmstadt.pdf
-%  bigchapter: Chapter haben doppelte Schriftgröße
-%  linedtoc: Linien im Inhaltsverzeichnis wie bei Überschriften
-%  colorbacktitle: Der Dokumenten-Titel wird mir der Accentfarbe hinterlegt
-\documentclass[bigchapter,colorback,accentcolor=tud4b,linedtoc,11pt]{tudreport}
+\message{ !name(Versuch-1.5-Zeeman-Effekt.tex)}
+\message{ !name(Versuch-1.5-Zeeman-Effekt.tex) !offset(99) }
 
-% Input Dokument hat das Encoding UTF-8
-\usepackage[utf8]{inputenc}
-% Wichtiges Paket für Links und verlinktes Inhaltsverzeichnis
-\usepackage[ngerman]{hyperref}
-% Paket für Fußnoten
-\usepackage[stable]{footmisc}
-% Alternatives package für bilder
-\usepackage{wrapfig}
-% Paket für amsmath (aligned mathe formeln)
-\usepackage{amsmath}
-% Farbige tabellen
-\usepackage{colortbl}
-
-
-% Paket für Bibliotheks-Verzeichnis, square: Verwende eckige statt runde klammern
-% \usepackage[square]{natbib}
-% Paket zum Plotten von Datensätzen
-\usepackage{pgfplots}
-\pgfkeys{%
-  /pgfplots/default/.style={%
-    /pgf/number format/use comma,
-    legend pos=north east,
-    x tick label style={/pgf/number format/1000 sep=},
-    y tick label style={/pgf/number format/1000 sep=},
-    width=0.9\linewidth,
-    height=0.40\linewidth,
-    scale only axis,
-    grid=both,
-    tick align=outside,
-    tickpos=minor,
-    left X tick num=3,
-    minor y tick num=4,
-    minor grid style={dotted,thin}
-  }
-}
-
-% Anhänge für Original-Messdaten
-\usepackage{fancyvrb}
-
-% Verwende deutsche Bezeichner für Inhaltsverzeichnis, ... (ngerman = New German: neue Rechtschreibung)
-\usepackage{ngerman}
-% Deutsche Zahlen (entfernt z.B. das Leerzeichen nach einem Dezimal-Komma)
-\usepackage{ziffer} 
-
-\usepackage[verbose]{placeins}
-
-%wegen Grafikverschiebung hinzugefügt
-\usepackage{float}
-
-%\usepackage{graphicx}
-%\usepackage{caption}
-\usepackage{subcaption} %Für subfigures
-
-% PDF-Optionen
-\hypersetup{%
-  pdftitle={TU Darmstadt \- Physikalisches Praktikum für Fortgeschrittene},
-  pdfauthor={Esra Bauer, Sören Link und Christian Hab},
-  pdfsubject={Versuch 1.5},
-  pdfview=FitH,
-}
-% Nummeriere formeln in Subsections einzeln
-% Kleines makro zur assymetrischen Fehlerangabe
-
-% Entspricht-Zeichen
-\usepackage{scalerel}
-
-\newcommand\equalhat{%
-\let\savearraystretch\arraystretch
-\renewcommand\arraystretch{0.3}
-\begin{array}{c}
-\stretchto{
-    \scalerel*[\widthof{=}]{\wedge}
-    {\rule{1ex}{3ex}}%
-}{0.5ex}\\ 
-=%
-\end{array}
-\let\arraystretch\savearraystretch
-}
-%BEGINN TITELSEITE
-
-\title{Zeeman-Effekt}
-
-\subtitle{Esra Bauer  \\Sören Link \\Christian Hoch}
-
-\subsubtitle{Betreuer: Matthias Sattig \hfill Versuchsdatum: 13. April 2015}
-
-\author{Esra Bauer, Sören Link, Christian Hoch}
-
-%\settitlepicture{img/title.jpg}
-
-\institution{Physikalisches Praktikum \\für Fortgeschrittene \\ Versuch 1.5}
-
-\date{\today}
-%ENDE TITELSEITE
-
-
-\begin{document}
 %ANFANG DOKUMENT
 
 %Titelseite einfügen
@@ -285,16 +183,14 @@ so gelten folgende Auswahlregen:
 
 \chapter{Durchführung}
 \section{Messung von $\frac{\delta\alpha_1}{\Delta g_{eff} \delta\alpha_2}$}
-
 Um das Bohrsche Magneton zu berechnen, benötigen wir neben dem verwendeten
 Magnetfeld, welches wir mit Hilfe einer Hall-sonder bestimmen, noch das
 Verhältniss von $\delta\alpha_1$ zu $\Delta g_{eff} \delta\alpha_2$.
-
 Um dieses verhältniss bestimmen zu können, müssen zunächst mit Hilfe eines
-Farbfilters die sichtbaren Spektrallinien reduziert werden. Dazu stehen uns Filter
-mit Wellenlängen von $405 nm \pm 1\%$, $436 nm \pm 1\%$ und $546 nm \pm 1\%$
-zur verfügung, welche bei der verwendeten Quecksilberdampflampe den Übergängen von
-$2^3S_1$ nach $2^3P_0$, $2^3P_1$ und $2^3P_2$ entprechen. Durch das angelegte
+Filters die sichtbaren Spektrallinien reduziert werden. Dazu stehen uns Filter
+mit Wellenlängen von $405 nm \pm 1%$, $436 nm \pm 1%$ und $546 nm \pm 1%$
+zur verfügung, was bei der verwendeten Quecksilberdampflampe den Übergängen von
+$2^3S_1$ nach $2^3P_0$, $2^3P_1$ und $2^3P_2$ entspricht. Durch das angelegte
 Magnetfeld wird die Entartung der Energieniveaus entsprechend des anormalen
 Zeeman-Effekts aufgehoben und wir können im Interferometer mehrere
 Spektrallinien beobachten.
@@ -305,11 +201,22 @@ $\frac{\delta\alpha_1}{\Delta g_{eff} \delta\alpha_2}$ wird das Magnetfeld so
 eingestellt, dass sich Spektrallinien von benachtbarten Interferenzordnungen
 überlagern.
 
-% \begin{tabular}{p{0cm} p{2cm} p{0cm}}
-%  0 &  & 2  \\
-%  \multicolumn{1}{p{0cm}|}{} &  &\multicolumn{1}{|p{0cm}}{}  \\
-%  \multicolumn{3}{c}{\raisebox{1.5ex}{\smash{$\underbrace{\makebox[2cm]{}}_{\delta\alpha_1}$}}} \\
-% \end{tabular}
+\documentclass{article}
+\begin{document}
+\[
+  \begin{array}{|c|c|c|c}
+  p     & q     & p\lor{}q & p\land{}q                  \\ \hline
+  0     & 0     & 0        & 0                          \\
+  0     & 1     & 1        & 0                          \\
+  1     & 0     & 1        & 0                          \\
+  1     & 1     & 1        & 1                          \\ \hline
+  \omit & \omit & \omit\span\omit\mathstrut\upbracefill \\
+  \omit & \omit & \multicolumn{2}{c}{\scriptstyle\ell}  \\
+  \end{array}
+\]
+\end{document}
+
+
 % Am
 % einfachsten lassen sich diese Werte in unserem Aufbau messen, indem man das
 % angelegte Magnetfeld so einreguliert, dass sich die äußeren Niveaus zweier
@@ -446,3 +353,5 @@ Für 546 nm ergeben sich sogar 9 Linien:
   \bibitem{Anleitung} \url{Versuchsanleitung}
 \end{thebibliography}
 \end{document}
+
+\message{ !name(Versuch-1.5-Zeeman-Effekt.tex) !offset(-357) }
