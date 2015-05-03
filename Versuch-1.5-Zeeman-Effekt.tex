@@ -313,8 +313,8 @@ Um unsere Messdaten auswerten zu können, sind zunächst einige theoretische Vor
 \begin{center}
   \begin{tabular}{|p{2.2cm}|p{4cm}|p{2cm}|p{2cm}|}
     \hline
-    Übergang & Wellenlänge in nm & ${g_J}_1$ & ${g_J}_2$ \\ \hline
-    $2^3S_1~\rightarrow~2^3P_0$ & 405 & 2 & ?  \\ \hline
+    Übergang & Wellenlänge in nm & $g_J$ & $g_J'$  \\ \hline
+    $2^3S_1~\rightarrow~2^3P_0$ & 405 & 2 & - \\ \hline
     $2^3S_1~\rightarrow~2^3P_1$ & 436 & 2 & $\frac{3}{2}$ \\ \hline
     $2^3S_1~\rightarrow~2^3P_2$ & 546 & 2 & $\frac{3}{2}$ \\ \hline
 	\end{tabular}
@@ -335,9 +335,9 @@ Die $g_{eff}$-Werte lassen sich leicht gemäß $g_{eff} = g_J M_J - g_J' M_J'$ b
   \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
     \hline
     $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
-    1               & -1               & 0 &  \\ \hline
-    0               & 0                & 0 &  \\ \hline
-    -1              & 1                & 0 &  \\ \hline
+    1               & -1               & 0 & 2 \\ \hline
+    0               & 0                & 0 & 0 \\ \hline
+    -1              & 1                & 0 & -2 \\ \hline
 	\end{tabular}
 \end{center}
 
@@ -375,39 +375,26 @@ Für 546 nm ergeben sich sogar 9 Linien:
 \end{center}
 
 \section{Bestimmung des Bohrschen Magnetons}
-%\begin{center}
-%\begin{figure}[h]
-% \begin{tikzpicture}
-% \begin{axis}[
-%     legend pos=south west,
-%     title={Messereignisse in Abhängigkeit der Detektorposition},
-%     xlabel=Detektorposition in µm,
-%     x tick label style={/pgf/number format/1000 sep=},
-%     ylabel=Messereignisse,
-%     y tick label style={/pgf/number format/1000 sep=},
-%     width=0.9\textwidth,
-%     height= 9cm,
-%     xmin=1500,
-%     xmax=2500,
-%     grid=both,
-%     ymin=0,
-%     %ymax=0.0045,
-%     tick align=outside,
-%     tickpos=left,
-%     minor x tick num=3,
-%     minor y tick num=4,
-%     minor grid style={dotted,thin}
-% ]
-% \addplot[red, only marks, mark=x, mark size=1pt, %error bars/.cd, y dir=both, y fixed relative=0.01, x dir=both, x fixed=0.05
-% ]
-% table[x index={0},y index={1}] {data/beamprofile2.bp};
-% %\addlegendentry{Leistung der LED auf der Photoplatte}
-% \end{axis}
-% \end{tikzpicture}
-% \captionof{figure}{Zahl der Messereignisse über der Detektorpositon mit leeren Probenhalter, ohne beamstop und mit Messing-Strahlabsorber.}
-% \end{figure}
-% \end{center}
+
+Wie bereits vorher erklärt, berechnen wir das Bohrsche Magneton gemäß
+
+$$\mu_{B}=\frac{hc}{2dB}\frac{\delta\alpha_{1}}{\triangle g_{eff}\delta\alpha_{2}}$$.
+
+$\Delta \alpha_2$ ist für 405 nm 2 bzw. 4, da hier aufgrund der guten Ablesbarkeit zwei verschiedene Positionen gemessen werden konnten, für 436 nm beträgt der Wert $\frac{7}{2}$ und für 546 nm genau 3. Somit ergeben sich nach Mittelwertbildung folgende Werte:
+
+\begin{center}
+  \begin{tabular}{|p{2cm}|p{4cm}|p{2cm}|p{2cm}|}
+    \hline
+    Übergang & $< \mu_B >$ in $10^{-24}~ \frac{J}{T}$ & $\sigma_{\mu_B}$ & $\sigma_{\mu_B}$ in \% \\ \hline
+    405               & 8,923 & 0,211 & 2,37  \\ \hline
+    436               & 9,512 & 0,1 & 1,05  \\ \hline
+    546               & 9,052 & 1,085 & 1,2  \\ \hline
+    \end{tabular}
+\end{center}
+
 \chapter{Fazit}
+
+Bei der qualitativen Überprüfung der klassischen Erklärung des Zeeman-Effektes treten keine Probleme auf bzw. mit den zur Verfügung stehenden Messintrumenten kann das Modell eindeutig bestätigt werden. Bei der Überprüfung des quantenmechanischen Modells muss quantitativ gearbeitet werden, um z.B. das Bohrsche Magneton zu berechnen. Hierbei fällt auf, dass für jeden Übergang eine mehr oder weniger große systematische Abweichung besteht. Betrachtet man den Mittelwert über alle Werte, ergibt sich jedoch eine gute Annäherung an den Literaturwert von $9,274 \cdot 10^{-24}~ \frac{J}{T}$. Dass bei nahezu jeder Messreihe eine systematische Abweichung besteht, liegt vermutlich in der ungenauen Ablesbarkeit begründet. Da das Bild der Kamera nur schwer zu erkennen ist bzw. die genaue Position der Überlappung kaum zu ermitteln ist, ergeben sich hierbei Fehler. Dennoch war die Berechnung des Bohrschen Magnetons bis auf eine relative Ungenauigkeit von etwa 0,1 möglich, was im Rahmen der Möglichkeiten als gutes Ergebnis anzusehen ist.
 
 %ENDE INHALT
 \cleardoublepage{}
