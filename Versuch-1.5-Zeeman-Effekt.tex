@@ -114,7 +114,15 @@
 
 %ANFANG INHALT
 \chapter{Einleitung}
-
+In diesem Versuch überprüfen wir sowohl die klassischen als auch die
+quantenmechanischen Vorhersagen bezüglich des Einflusses eines äußeren
+Magnetfeldes auf die beobachteten Spektrallinien. Dazu beobachten wir den
+quantitativen Einfluss eines äußeren Magnetfeldes auf die Spektrallinien von
+Helium und Quecksilber mit Hilfe einer an ein Fabry–Pérot interferometer
+angeschlossener CCD-Kamera. Um eine Aussage über die quantenmechanischen
+Vorhersagen treffen zu können, berechnen wir anschließend aus den gewonnenen
+Daten einen Wert für das Bohrsche Magneton und vergleichen diesen mit dem
+Literaturwert.
 
 \chapter{Grundlagen}
 
@@ -312,7 +320,8 @@ eingestellt, dass sich Spektrallinien von benachtbarten Interferenzordnungen
 \begin{figure}[H] 
   \centering
      \includegraphics[width=0.8\textwidth]{img/linienspektrum405.png}
-  \caption{Linienspektrum bei Verwendung des 405nm Filters. Beide gezeigten
+  \caption{Linienspektrum bei Verwendung des 405nm Filters. Man erhält die
+    unteren Einstellungen durch sukzessives hochregulieren des äußeren Magnetfeldes. Beide gezeigten
     Einstellungen wurden für die Messung verwendet.}
   \label{fig:405nmlines}
 \end{figure}
@@ -337,7 +346,8 @@ eingestellt, dass sich Spektrallinien von benachtbarten Interferenzordnungen
 \end{figure}
 
 
-\begin{center}
+\begin{table}[H]
+  \begin{center}
   \begin{tabular}{|c|c|c|c|}
     \hline
     \multirow{2}{*}{Messung} & \multicolumn{3}{c|}{B in Tesla}     \\ \cline{2-4}
@@ -354,10 +364,12 @@ eingestellt, dass sich Spektrallinien von benachtbarten Interferenzordnungen
     9                        & 0,377        & 0,392        & 0,489 \\ \hline
     10                       & 0,733        & 0,393        & 0,487 \\ \hline
 	\end{tabular}
-     \caption{Linienspektrum bei Verwendung des 546nm Filters. Auch hier wurde
-       lediglich die unterste Einstellung für die Messungen verwendet, da die
-       einzelnen Spektrallinien sonst nicht eindeutig genug zu unterscheiden waren.}
-\end{center}
+    \caption{Gemessenes äußeres Magnetfeld, für welches die durch den jeweiligen
+    Filter sichtbaren Spektrallinien sich überlagert haben. Die Messungen mit
+    dem 405nm-Filter wurde abwechselnd in beiden beschrieben einstellungen
+    durchgeführt.}
+  \end{center}
+\end{table}
 
 Da unser Versuchsaufbau eine genaue Fehlerabschätzung nahezu unmöglich macht,
 wurden für jeden verwendeten Filter 10 Messungen durchgeführt. Der von uns
