@@ -12,6 +12,7 @@
 \usepackage[ngerman]{hyperref}
 % Paket für Fußnoten
 \usepackage[stable]{footmisc}
+\usepackage{multirow}
 % Alternatives package für bilder
 \usepackage{wrapfig}
 % Paket für amsmath (aligned mathe formeln)
@@ -112,33 +113,34 @@
 \tableofcontents
 
 %ANFANG INHALT
-
 \chapter{Einleitung}
+
 
 \chapter{Grundlagen}
 
 
 \section{Fabry-Pérot-Interferometer}
 
-\begin{wrapfigure}{o}{0.5\columnwidth}%
-\includegraphics[scale=0.35]{img/Fabry}
-
-\caption{Fabry-Pérot-Interferometer}
-\end{wrapfigure}%
+\begin{figure}[H] 
+  \centering
+     \includegraphics[width=0.4\textwidth]{data/Fabry.jpg}
+  \caption{Strahlengang im Fabry-Pérot-Interferometer.}
+  \label{fig:Bild1}
+\end{figure}
 
 Das Fabry-Pérot-Interferometer wird in diesem Versuch genutzt, um
 Aussagen über die Frequenz von elektromagnetischer Strahlung zu machen.
 Es besteht aus zwei parallelen Spiegeln mit hoher Reflektivität, welche
 im Abstand $d$ zu einander angeordnet sind. Im Zwischenraum befindet
 sich Luft. \\
-Betrachet man einen einfallenden Lichtstrahl im Winkel $\alpha$ zur
+Betrachtet man einen einfallenden Lichtstrahl im Winkel $\alpha$ zur
 Spiegelnormalen, so wird ein Teil davon durch beide Spiegel transmittiert,
-wo hingegen ein anderer Teil einmal an beiden Spiegeln reflektiert
+wohingegen ein anderer Teil einmal an beiden Spiegeln reflektiert
 und dann erst durch den zweiten Spiegel hindurchgelassen wird. Obwohl
 es auch noch Strahlen gibt, die viel öfter zwischen den Spiegeln hin
-und her reflektiert werden, betrachten wir ersteinmal diese beiden
-Teilstrahlen. Nach dem Austritt aus dem Zweiten Spiegel, haben sie
-einen Ganguntersschied von $s=2a-b=2dcos\alpha$. Ist $s=n\lambda$,
+und her reflektiert werden, betrachten wir erst einmal diese beiden
+Teilstrahlen. Nach dem Austritt aus dem zweiten Spiegel haben sie
+einen Gangunterschied von $s=2a-b=2dcos\alpha$. Ist $s=n\lambda$,
 also ein ganzzahliges Vielfaches der Wellenlänge, so tritt konstruktive
 Interferenz auf. \\
 Sei $\delta\alpha_{2}$ der Winkel zwischen zwei Interferenzordnungen,
@@ -146,58 +148,59 @@ $\delta\alpha_{1}$ der Winkel zwischen zwei Spektrallinien der selben
 Interferenzordnung und $\triangle g_{eff}$ die $g_{eff}$-Differenz
 zwischen selbigen, so ergibt sich in der Nähe der höchsten Interferenzordnung
 folgender Zusammenhang mit dem Bohrschen Magneton:
-\[
-\mu_{B}=\frac{hc}{2dB}\frac{\delta\alpha_{1}}{\triangle g_{eff}\delta\alpha_{2}}
-\]
+
+$$\mu_{B}=\frac{hc}{2dB}\frac{\delta\alpha_{1}}{\triangle g_{eff}\delta\alpha_{2}}$$
+
 Messtechnisch gibt man nun $\delta\alpha$ in Einheiten von $g_{eff}$
 an. Somit kürzt sich $\triangle g_{eff}$ und $\delta\alpha_{1}$
 heraus und man muss nur noch $\delta\alpha_{2}$ bestimmen. Das geht
 am einfachsten, wenn man das Magnetfeld so einstellt, dass sich die
 energetisch höchste/niedrigste Linie mit der niedrigsten/höchsten
 Linie der eins niedrigeren/höheren Ordnung überlappt. Denn genau dann
-gilt $\delta\alpha_{2}=$$2g_{eff,MAX}$, wobei $g_{eff,MAX}$ das
-größtmögliche $g_{eff}$ eines Übergangs ist. \pagebreak{}
+gilt $\delta\alpha_{2}=$ $2g_{eff,MAX}$, wobei $g_{eff,MAX}$ das
+größtmögliche $g_{eff}$ eines Übergangs ist. 
 
 
 \section{Klassische Erklärung des Zeeman-Effekts}
 
-\begin{wrapfigure}{o}{0.5\columnwidth}%
-\includegraphics[scale=0.7]{Zerlegung}
-
-\caption{Veränderung der Ionenoszillation duch Magnetfeld}
-\end{wrapfigure}%
+\begin{figure}[H] 
+  \centering
+     \includegraphics[width=0.6\textwidth]{data/Zerlegung.jpg}
+  \caption{Veränderung der Ionenoszillation durch ein äußeres Magnetfeld.}
+  \label{fig:Bild1}
+\end{figure}
 
 
 Nach der klassischen Theorie ist für die Emission eines Lichtquants
 die Oszillation eines geladenen Teilchens, eines Ions, verantwortlich.
 Wird zusätzlich dazu ein Magnetfeld angelegt (in z-Richtung), so wirkt
 auf das Ion die Lorentzkraft und es beginnt, mit der Lamorfrequenz
-$\omega_{L}$ um die z-Achse zu präzedieren. Wärend die z-Komponente
+$\omega_{L}$ um die z-Achse zu präzedieren. Während die z-Komponente
 der Oszillation des Ions unverändert bleibt, kommt es bei den Komponenten
 senkrecht zum Magnetfeld zu einer Kreisbewegung um die z-Achse, dessen
 Frequenz um $\omega_{L}$ einmal abgeschwächt und rechtsdrehend um
 die z-Achse und ein anderes mal verstärkt und linksdrehend zu beobachten
 ist. \\
-Man kann sich die Lichtemission nun vorstellen, wie einen Herzschen
+Man kann sich die Lichtemission nun vorstellen, wie einen Hertzschen
 Dipol, wobei das Ion die bewegte Ladung darstellt und der Dipol nur
 senkrecht zu dieser Bewegungsrichtung abstrahlt. \\
 Schaut man nun also transversal zum Magnetfeld auf das Teilchen, so
 wird man in Magnetfeldrichtung ($\pi$-Komponente) die vom Magnetfeld
-unabhängige emittierte Frequenz $\omega$ beobachten, Senkrecht dazu
+unabhängige emittierte Frequenz $\omega$ beobachten, senkrecht dazu
 jedoch die je um $\omega_{L}$ nach unten bzw. nach oben verschobenen
 Frequenzen der $\sigma^{-/+}$-Komponenten. In diesem Fall sind alle
 Komponenten linear polarisiert. \\
 Schaut man longitudinal zum Magnetfeld, sieht man nur die $\sigma^{-/+}$-Komponenten,
-welche jeweils zirkular Polarisiert sind. 
+welche jeweils zirkular polarisiert sind. 
 
 
-\section{Quantenmeschanische Kopplungen im Atom}
+\section{Quantenmechanische Kopplungen im Atom}
 
-Betrachtet man ein Atom, wo wird es quantenmechanisch durch den Hameltonoperator
+Betrachtet man ein Atom, wo wird es quantenmechanisch durch den Hamiltonoperator
 beschrieben:
-\[
-\hat{H}=\hat{T}+\hat{V}_{C}+\hat{V}_{ss}+\hat{V}_{ll}+\hat{V}_{ls}
-\]
+
+$$\hat{H}=\hat{T}+\hat{V}_{C}+\hat{V}_{ss}+\hat{V}_{ll}+\hat{V}_{ls}$$
+
 Er setzt sich zusammen aus $\hat{T}$, dem Operator der kinetischen
 Energie, $\hat{V}_{C}$, der Coulomb-Wechselwirkung und den magnetischen
 Wechselwirkungen $\hat{V}_{ss},\mbox{ }\hat{V}_{ll}\mbox{ und }\hat{V}_{ls}$.
@@ -207,13 +210,12 @@ Wechselwirkungen $\hat{V}_{ss},\mbox{ }\hat{V}_{ll}\mbox{ und }\hat{V}_{ls}$.
 
 Ist $\hat{V}_{ls}$ viel kleiner als die beiden anderen mag. Wechselwirkungen,
 so koppeln die einzelnen Elektronenspins zu einem Gesamtspin $S=\sum s_{i}$
-und ganauso die Elektronendrehimpulse zu einem Gesamtbahndrehimpuls
-$L=\sum l_{i}$. Diese koppeln dann zu einem Gesmatdrehimpuls $J=\left|L-S\right|,\mbox{ }\left|L-S\right|+1,\mbox{ ... }\left|L+S\right|$.\\
+und genauso die Elektronendrehimpulse zu einem Gesamtbahndrehimpuls
+$L=\sum l_{i}$. Diese koppeln dann zu einem Gesamtdrehimpuls $J=\left|L-S\right|,\mbox{ }\left|L-S\right|+1,\mbox{ ... }\left|L+S\right|$.\\
 Es ist üblich, den Zustand eines Atoms in der Notation nach Russel
 und Saunders anzugeben:
-\[
-^{(2S+1)}L_{J}
-\]
+
+$$^{(2S+1)}L_{J}$$
 
 
 
@@ -222,21 +224,21 @@ und Saunders anzugeben:
 Hier ist $\hat{V}_{ls}$ deutlich größer als die beiden anderen mag.
 Wechselwirkungen. Es koppeln Spin und Bahndrehimpuls eines Elektrons
 zu einem Gesamtdrehimpuls $j_{i}=l_{i}+s_{i}$ eines Elektrons. Diese
-Koppeln dann zu einem Gesamtdrehimpuls des Atoms $J=\sum j_{i}$.
+koppeln dann zu einem Gesamtdrehimpuls des Atoms $J=\sum j_{i}$.
 
 
-\section{Quantenmeschanische Erklärungen}
+\section{Quantenmechanische Erklärungen}
 
-Legt man ein Magnetfeld (in z-Richtung) an, so ergänzt sich der Hameltonien
+Legt man ein Magnetfeld (in z-Richtung) an, so ergänzt sich der Hamiltonoperator
 eines Atoms um die magnetische Störung $\hat{H}_{B}=-\hat{\mu}\vec{B}$
 mit $\hat{\mu}=\underset{i}{\sum}(\hat{\mu}_{l_{i}}+\hat{\mu}_{s_{i}})=\underset{}{\frac{\mu_{B}}{\hslash}\underset{i}{\sum}(g_{L}\hat{l}_{i}+g_{S}\hat{s}_{i})}$,
-wobei für die Landéeschen g-Faktoren gilt: $g_{L}=1$ und $g_{S}\thickapprox2$. 
+wobei für die Landéschen g-Faktoren gilt: $g_{L}=1$ und $g_{S}\thickapprox2$. 
 
 
-\subsection{Quantenmeschanische Erklärung des Zeeman-Effekts}
+\subsection{Quantenmechanische Erklärung des Zeeman-Effekts}
 
 Beim Zeeman-Effekt ist das Magnetfeld klein im Vergleich zu den Wechselwirkungen
-im Atom. Das heißt, es kommt zur LS-Koppelung und der Hameltonien
+im Atom. Das heißt, es kommt zur LS-Koppelung und der Hamiltonoperator
 der magnetischen Störung nimmt die Form $\hat{H}_{Ze}=\frac{\mu_{B}}{\hslash}g_{J}\hat{J}\vec{B}$
 an. Die Eigenwerte dieses Operators geben die Zeeman-Energien: $E_{Ze}=\mu_{B}Bg_{J}M_{J}$.
 Dabei ist $M_{J}$ die magnetische Quantenzahl. Für $g_{J}$ ergibt
@@ -252,7 +254,8 @@ einem Übergang mit $\triangle M=\pm1$. Das gilt auch für den nachfolgenden
 Paschen-Back-Effekt.
 
 
-\subsection{Quantenmeschanische Erklärung des Paschen-Back-Effekts}
+\subsection{Quantenmechanische Erklärung des Paschen-Back-Effekts}
+>>>>>>> origin/master
 
 Beim Paschen-Back-Effekt ist das angelegte Magnetfeld so groß, dass
 die Spin-Bahn-Wechselwirkung aufgehoben wird. Somit sind Gesamtspin
@@ -287,7 +290,7 @@ so gelten folgende Auswahlregen:
 \section{Messung von $\frac{\delta\alpha_1}{\Delta g_{eff} \delta\alpha_2}$}
 
 Um das Bohrsche Magneton zu berechnen, benötigen wir neben dem verwendeten
-Magnetfeld, welches wir mit Hilfe einer Hall-sonder bestimmen, noch das
+Magnetfeld, welches wir mit Hilfe einer Hall-sonde bestimmen, noch das
 Verhältniss von $\delta\alpha_1$ zu $\Delta g_{eff} \delta\alpha_2$.
 
 Um dieses verhältniss bestimmen zu können, müssen zunächst mit Hilfe eines
@@ -296,14 +299,75 @@ mit Wellenlängen von $405 nm \pm 1\%$, $436 nm \pm 1\%$ und $546 nm \pm 1\%$
 zur verfügung, welche bei der verwendeten Quecksilberdampflampe den Übergängen von
 $2^3S_1$ nach $2^3P_0$, $2^3P_1$ und $2^3P_2$ entprechen. Durch das angelegte
 Magnetfeld wird die Entartung der Energieniveaus entsprechend des anormalen
-Zeeman-Effekts aufgehoben und wir können im Interferometer mehrere
+Zeeman-Effekts aufgehoben und wir können mit Hilfe der an das
+Fabrey-Perot-Interferometer angeschlossenen Kamera mehrere
 Spektrallinien beobachten.
 
 Durch veränderung der Magnetfeldstärke lassen sich die im Interferometer
 beobachteten Spektrallinien weiter verschieben. Zur Messung von
 $\frac{\delta\alpha_1}{\Delta g_{eff} \delta\alpha_2}$ wird das Magnetfeld so
 eingestellt, dass sich Spektrallinien von benachtbarten Interferenzordnungen
-überlagern.
+überlagern. 
+
+\begin{figure}[H] 
+  \centering
+     \includegraphics[width=0.8\textwidth]{img/linienspektrum405.png}
+  \caption{Linienspektrum bei Verwendung des 405nm Filters. Beide gezeigten
+    Einstellungen wurden für die Messung verwendet.}
+  \label{fig:405nmlines}
+\end{figure}
+
+\begin{figure}[H] 
+  \centering
+     \includegraphics[width=0.8\textwidth]{img/linienspektrum436.png}
+     \caption{Linienspektrum bei Verwendung des 436nm Filters. Da die einzelnen
+       Spektrallinien bei der oberen Einstellung nicht klar voneinander zu
+       unterscheiden waren, wurde für die Messung lediglich die untere
+       Eisntellung verwendet.}
+  \label{fig:436nmlines}
+\end{figure}
+
+\begin{figure}[H] 
+  \centering
+     \includegraphics[width=0.8\textwidth]{img/linienspektrum546.png}
+     \caption{Linienspektrum bei Verwendung des 546nm Filters. Auch hier wurde
+       lediglich die unterste Einstellung für die Messungen verwendet, da die
+       einzelnen Spektrallinien sonst nicht eindeutig genug zu unterscheiden waren.}
+  \label{fig:546nmlines}
+\end{figure}
+
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|}
+    \hline
+    \multirow{2}{*}{Messung} & \multicolumn{3}{c|}{B in Tesla}     \\ \cline{2-4}
+                             & 405nm Filter & 436nm Filter & 546nm Filter
+                                                                   \\ \hline 
+    1                        & 0,362        & 0,400        & 0,472 \\ \hline
+    2                        & 0,726        & 0,399        & 0,484 \\ \hline
+    3                        & 0,391        & 0,403        & 0,488 \\ \hline
+    4                        & 0,723        & 0,390        & 0,480 \\ \hline
+    5                        & 0,365        & 0,396        & 0,490 \\ \hline
+    6                        & 0,741        & 0,393        & 0,485 \\ \hline
+    7                        & 0,366        & 0,393        & 0,499 \\ \hline
+    8                        & 0,730        & 0,393        & 0,480 \\ \hline
+    9                        & 0,377        & 0,392        & 0,489 \\ \hline
+    10                       & 0,733        & 0,393        & 0,487 \\ \hline
+	\end{tabular}
+     \caption{Linienspektrum bei Verwendung des 546nm Filters. Auch hier wurde
+       lediglich die unterste Einstellung für die Messungen verwendet, da die
+       einzelnen Spektrallinien sonst nicht eindeutig genug zu unterscheiden waren.}
+\end{center}
+
+Da unser Versuchsaufbau eine genaue Fehlerabschätzung nahezu unmöglich macht,
+wurden für jeden verwendeten Filter 10 Messungen durchgeführt. Der von uns
+errechnete Wert für das Bohrsche Magneton bestimmt sich dann aus dem Mittelwert
+und der Standardabweichung der aufgenommenen Messdaten.
+
+Um den Einfluss von systematischen Fehlern beim Einstellen des Magnetfeldes auf
+die Messungen zu reduzieren, wurden für jeden der beobachteten Übergängen die
+Messungen abwechselnd von allen 3 Prektikumsteilnehmern durchgeführt.
+
 
 % \begin{tabular}{p{0cm} p{2cm} p{0cm}}
 %  0 &  & 2  \\
@@ -329,11 +393,11 @@ eingestellt, dass sich Spektrallinien von benachtbarten Interferenzordnungen
 \chapter{Auswertung}
 \section{Überprüfung der Vorhersagen der klassischen Erklärung}
 
-Zunächst betrachten wir den Fall des transversalen Zeemann-Effektes, also des senkrecht zur Blickrichtung ausgerichteten Magneten. In der Tat können wir, wenn der Linearpolarisator parallel zum Magnetfeld ausgerichtet ist, genau eine Spektrallinie beobachten, die bei geringfügiger Drehung des Linearpolarisators in beide Richtungen schwächer wird. Dies zeigt, dass lediglich parallel zum Magnetgeld polarisiertes Licht detektiert wird, was der Vorhersage des klassischen Modells entspricht. Wir sehen die $\pi$-Komponente, die in Richtung der z-Achse (also der Magnetfeldrichtung) schwingt und daher nicht vom Magnetfeld beeinflusst wird, also auch die gleiche Frequenz wie vorher besitzt.
+Zunächst betrachten wir den Fall des transversalen Zeeman-Effektes, also des senkrecht zur Blickrichtung ausgerichteten Magneten. In der Tat können wir, wenn der Linearpolarisator parallel zum Magnetfeld ausgerichtet ist, genau eine Spektrallinie beobachten, die bei geringfügiger Drehung des Linearpolarisators in beide Richtungen schwächer wird. Dies zeigt, dass lediglich parallel zum Magnetgeld polarisiertes Licht detektiert wird, was der Vorhersage des klassischen Modells entspricht. Wir sehen die $\pi$-Komponente, die in Richtung der z-Achse (also der Magnetfeldrichtung) schwingt und daher nicht vom Magnetfeld beeinflusst wird, also auch die gleiche Frequenz wie vorher besitzt.
 
 Bei senkrecht zum Magnetfeld ausgerichtetem Linearpolarisator sehen wir zwei Spektrallinien im gleichen Abstand links und rechts der ursprünglichen Linie (bzw. links und rechts der $\pi$-Komponente). Daraus folgt, dass die Frequenzen dieser beiden Linien um einen bestimmten Betrag verschoben sind. Weiterhin werden die Linien schwächer, wenn man den Polarisator von der senkrechten Position wegdreht. Wir sehen hier die $\sigma^+$- und $\sigma^-$-Komponenten, die in Richtung der x-Achse schwingen, also senkrecht zum Magnetgeld polarisiert sind und um Frequenzen $\pm \omega$ von der ursprünglichen Linie abweichen.
 
-Analog bestätigt sich das klassische Modell für den Fall des longitudinalen Zeemann-Effektes, bei dem mittels des $\frac{\lambda}{4}$-Plättchens, welches um 45$^{\circ}$ zum Linearpolarisator verdreht in den Strahlengang gebracht wird, nachgewiesen wird, dass lediglich zwei zirkular polarisierte Komponenten vorhanden sind, die entgegengesetzen Drehsinn besitzen und wiederum frequenzverschoben sind. Dies sind die $\sigma^+$- und $\sigma^-$-Komponenten, wobei die $\sigma^+$-Komponente einen mathematisch positiven Drehsinn besitzt. Dass die $\pi$-Komponente nicht sichtbar ist, erklärt sich dadurch, dass ein Hertzscher Dipol, als welchen wir das schwingende "`Ion"' betrachten, in Bewegungsrichtung nicht abstrahlt. Somit ist die klassische Vorhersage sowohl für den transversalen, als auch für den longitudinalen Zeemann-Effekt bestätigt.
+Analog bestätigt sich das klassische Modell für den Fall des longitudinalen Zeeman-Effektes, bei dem mittels des $\frac{\lambda}{4}$-Plättchens, welches um 45$^{\circ}$ zum Linearpolarisator verdreht in den Strahlengang gebracht wird, nachgewiesen wird, dass lediglich zwei zirkular polarisierte Komponenten vorhanden sind, die entgegengesetzen Drehsinn besitzen und wiederum frequenzverschoben sind. Dies sind die $\sigma^+$- und $\sigma^-$-Komponenten, wobei die $\sigma^+$-Komponente einen mathematisch positiven Drehsinn besitzt. Dass die $\pi$-Komponente nicht sichtbar ist, erklärt sich dadurch, dass ein Hertzscher Dipol, als welchen wir das schwingende "`Ion"' betrachten, in Bewegungsrichtung nicht abstrahlt. Somit ist die klassische Vorhersage sowohl für den transversalen, als auch für den longitudinalen Zeeman-Effekt bestätigt.
 
 \section{Überprüfung der Vorhersagen der quantenmechanischen Erklärung}
 
@@ -342,8 +406,8 @@ Um unsere Messdaten auswerten zu können, sind zunächst einige theoretische Vor
 \begin{center}
   \begin{tabular}{|p{2.2cm}|p{4cm}|p{2cm}|p{2cm}|}
     \hline
-    Übergang & Wellenlänge in nm & ${g_J}_1$ & ${g_J}_2$ \\ \hline
-    $2^3S_1~\rightarrow~2^3P_0$ & 405 & 2 & ?  \\ \hline
+    Übergang & Wellenlänge in nm & $g_J$ & $g_J'$  \\ \hline
+    $2^3S_1~\rightarrow~2^3P_0$ & 405 & 2 & - \\ \hline
     $2^3S_1~\rightarrow~2^3P_1$ & 436 & 2 & $\frac{3}{2}$ \\ \hline
     $2^3S_1~\rightarrow~2^3P_2$ & 546 & 2 & $\frac{3}{2}$ \\ \hline
 	\end{tabular}
@@ -364,9 +428,9 @@ Die $g_{eff}$-Werte lassen sich leicht gemäß $g_{eff} = g_J M_J - g_J' M_J'$ b
   \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
     \hline
     $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
-    1               & -1               & 0 &  \\ \hline
-    0               & 0                & 0 &  \\ \hline
-    -1              & 1                & 0 &  \\ \hline
+    1               & -1               & 0 & 2 \\ \hline
+    0               & 0                & 0 & 0 \\ \hline
+    -1              & 1                & 0 & -2 \\ \hline
 	\end{tabular}
 \end{center}
 
@@ -404,39 +468,26 @@ Für 546 nm ergeben sich sogar 9 Linien:
 \end{center}
 
 \section{Bestimmung des Bohrschen Magnetons}
-%\begin{center}
-%\begin{figure}[h]
-% \begin{tikzpicture}
-% \begin{axis}[
-%     legend pos=south west,
-%     title={Messereignisse in Abhängigkeit der Detektorposition},
-%     xlabel=Detektorposition in µm,
-%     x tick label style={/pgf/number format/1000 sep=},
-%     ylabel=Messereignisse,
-%     y tick label style={/pgf/number format/1000 sep=},
-%     width=0.9\textwidth,
-%     height= 9cm,
-%     xmin=1500,
-%     xmax=2500,
-%     grid=both,
-%     ymin=0,
-%     %ymax=0.0045,
-%     tick align=outside,
-%     tickpos=left,
-%     minor x tick num=3,
-%     minor y tick num=4,
-%     minor grid style={dotted,thin}
-% ]
-% \addplot[red, only marks, mark=x, mark size=1pt, %error bars/.cd, y dir=both, y fixed relative=0.01, x dir=both, x fixed=0.05
-% ]
-% table[x index={0},y index={1}] {data/beamprofile2.bp};
-% %\addlegendentry{Leistung der LED auf der Photoplatte}
-% \end{axis}
-% \end{tikzpicture}
-% \captionof{figure}{Zahl der Messereignisse über der Detektorpositon mit leeren Probenhalter, ohne beamstop und mit Messing-Strahlabsorber.}
-% \end{figure}
-% \end{center}
+
+Wie bereits vorher erklärt, berechnen wir das Bohrsche Magneton gemäß
+
+$$\mu_{B}=\frac{hc}{2dB}\frac{\delta\alpha_{1}}{\triangle g_{eff}\delta\alpha_{2}}$$.
+
+$\Delta \alpha_2$ ist für 405 nm 2 bzw. 4, da hier aufgrund der guten Ablesbarkeit zwei verschiedene Positionen gemessen werden konnten, für 436 nm beträgt der Wert $\frac{7}{2}$ und für 546 nm genau 3. Somit ergeben sich nach Mittelwertbildung folgende Werte:
+
+\begin{center}
+  \begin{tabular}{|p{2cm}|p{4cm}|p{2cm}|p{2cm}|}
+    \hline
+    Übergang & $< \mu_B >$ in $10^{-24}~ \frac{J}{T}$ & $\sigma_{\mu_B}$ & $\sigma_{\mu_B}$ in \% \\ \hline
+    405               & 8,923 & 0,211 & 2,37  \\ \hline
+    436               & 9,512 & 0,1 & 1,05  \\ \hline
+    546               & 9,052 & 1,085 & 1,2  \\ \hline
+    \end{tabular}
+\end{center}
+
 \chapter{Fazit}
+
+Bei der qualitativen Überprüfung der klassischen Erklärung des Zeeman-Effektes treten keine Probleme auf bzw. mit den zur Verfügung stehenden Messintrumenten kann das Modell eindeutig bestätigt werden. Bei der Überprüfung des quantenmechanischen Modells muss quantitativ gearbeitet werden, um z.B. das Bohrsche Magneton zu berechnen. Hierbei fällt auf, dass für jeden Übergang eine mehr oder weniger große systematische Abweichung besteht. Betrachtet man den Mittelwert über alle Werte, ergibt sich jedoch eine gute Annäherung an den Literaturwert von $9,274 \cdot 10^{-24}~ \frac{J}{T}$. Dass bei nahezu jeder Messreihe eine systematische Abweichung besteht, liegt vermutlich in der ungenauen Ablesbarkeit begründet. Da das Bild der Kamera nur schwer zu erkennen ist bzw. die genaue Position der Überlappung kaum zu ermitteln ist, ergeben sich hierbei Fehler. Dennoch war die Berechnung des Bohrschen Magnetons bis auf eine relative Ungenauigkeit von etwa 0,1 möglich, was im Rahmen der Möglichkeiten als gutes Ergebnis anzusehen ist.
 
 %ENDE INHALT
 \cleardoublepage{}
