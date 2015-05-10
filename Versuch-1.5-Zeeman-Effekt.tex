@@ -13,6 +13,7 @@
 % Paket für Fußnoten
 \usepackage[stable]{footmisc}
 \usepackage{multirow}
+\usepackage{colortbl}
 % Alternatives package für bilder
 \usepackage{wrapfig}
 % Paket für amsmath (aligned mathe formeln)
@@ -416,10 +417,10 @@ Um unsere Messdaten auswerten zu können, sind zunächst einige theoretische Vor
 \begin{center}
   \begin{tabular}{|p{2.2cm}|p{4cm}|p{2cm}|p{2cm}|}
     \hline
-    Übergang & Wellenlänge in nm & $g_J$ & $g_J'$  \\ \hline
-    $2^3S_1~\rightarrow~2^3P_0$ & 405 & 2 & - \\ \hline
-    $2^3S_1~\rightarrow~2^3P_1$ & 436 & 2 & $\frac{3}{2}$ \\ \hline
-    $2^3S_1~\rightarrow~2^3P_2$ & 546 & 2 & $\frac{3}{2}$ \\ \hline
+    Übergang                    & Wellenlänge in nm & $g_J$ & $g_J'$        \\ \hline
+    $2^3S_1~\rightarrow~2^3P_0$ & 405               & 2     & -             \\ \hline
+    $2^3S_1~\rightarrow~2^3P_1$ & 436               & 2     & $\frac{3}{2}$ \\ \hline
+    $2^3S_1~\rightarrow~2^3P_2$ & 546               & 2     & $\frac{3}{2}$ \\ \hline
 	\end{tabular}
 \end{center}
 
@@ -438,9 +439,9 @@ Die $g_{eff}$-Werte lassen sich leicht gemäß $g_{eff} = g_J M_J - g_J' M_J'$ b
   \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
     \hline
     $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
-    1               & -1               & 0 & 2 \\ \hline
-    0               & 0                & 0 & 0 \\ \hline
-    -1              & 1                & 0 & -2 \\ \hline
+    1            & -1    & 0      & 2         \\ \hline
+    0            & 0     & 0      & 0         \\ \hline
+    -1           & 1     & 0      & -2        \\ \hline
 	\end{tabular}
 \end{center}
 
@@ -449,13 +450,13 @@ Für 436 nm sind es 6 Linien:
 \begin{center}
   \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
     \hline
-    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
-    1               & -1               & 0 & -2 \\ \hline
-    1               & 0                & 1 & $-\frac{3}{2}$ \\ \hline
-    0               & -1               & -1 & $-\frac{1}{2}$ \\ \hline
-    0               & 1                & 1 & $\frac{1}{2}$ \\ \hline
-   -1               & 0                & -1 & $\frac{3}{2}$ \\ \hline    
-   -1               & 1                & 0 & 2 \\ \hline
+    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$      \\ \hline
+    1            & -1    & 0      & -2             \\ \hline
+    1            & 0     & 1      & $-\frac{3}{2}$ \\ \hline
+    0            & -1    & -1     & $-\frac{1}{2}$ \\ \hline
+    0            & 1     & 1      & $\frac{1}{2}$  \\ \hline
+   -1            & 0     & -1     & $\frac{3}{2}$  \\ \hline    
+   -1            & 1     & 0      & 2              \\ \hline
     \end{tabular}
 \end{center}
 
@@ -464,18 +465,69 @@ Für 546 nm ergeben sich sogar 9 Linien:
 \begin{center}
   \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
     \hline
-    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
-    1               & -1               & 0 & -2 \\ \hline
-    1               & 0                & 1 & $-\frac{3}{2}$ \\ \hline
-    1               & 1                & 2 & -1 \\ \hline
-    0               & -1               & -1 & $-\frac{1}{2}$ \\ \hline
-    0               & 0                & 0 & 0 \\ \hline
-    0               & 1                & 1 & $\frac{1}{2}$ \\ \hline
-    -1              & -1               & -2 & 1 \\ \hline
-    -1              & 0                & -1 & $\frac{3}{2}$ \\ \hline
-    -1              & 1                & 0 & 2 \\ \hline
+    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$      \\ \hline
+    1            & -1    & 0      & -2             \\ \hline
+    1            & 0     & 1      & $-\frac{3}{2}$ \\ \hline
+    1            & 1     & 2      & -1             \\ \hline
+    0            & -1    & -1     & $-\frac{1}{2}$ \\ \hline
+    0            & 0     & 0      & 0              \\ \hline
+    0            & 1     & 1      & $\frac{1}{2}$  \\ \hline
+    -1           & -1    & -2     & 1              \\ \hline
+    -1           & 0     & -1     & $\frac{3}{2}$  \\ \hline
+    -1           & 1     & 0      & 2              \\ \hline
     \end{tabular}
 \end{center}
+
+
+
+\subsection{Aufspaltung des $3^3 D_{1} -> 2^3 P_{1}$ Übergangs nach Zeeman und Paschen-Back}
+
+\begin{table}[H]
+  \begin{center}
+  \def\arraystretch{1.25}
+  \begin{tabular}{*{4}{|p{2cm}|}}
+    \hline
+     $\Delta m_j$        & $m_J$ & $m_J'$ & $g_{eff}$      \\ \hline
+     \multirow{2}{*}{+1} & 1     & 0      & $\frac{1}{2}$  \\ \cline{2-4}
+                         & 0     & -1     & $\frac{3}{2}$  \\ \hline
+     \multirow{2}{*}{0}  & 1     & 1      & $-1$           \\ \cline{2-4}
+                         & -1    & -1     & $1$            \\ \hline
+     \multirow{2}{*}{-1} & 0     & 1      & $-\frac{3}{2}$ \\ \cline{2-4}
+                         & -1    & 0      & $-\frac{1}{2}$ \\ \hline
+    \end{tabular}
+    \caption{Aufspaltung nach Zeeman}
+  \end{center}
+\end{table}
+
+
+\begin{table}[H]
+  \begin{center}
+  \def\arraystretch{1.25}
+  \begin{tabular}{|c||c|r@{|}l|c||c|r@{|}l|c||c|c|}
+    \hline
+     $\Delta m_j$        & $m_J$               & $m_L$ & $m_S$ & $g_Lm_L+g_Sm_S$ & $m_J'$              & $m_L'$ & $m_S'$ & $g_Lm_L'+g_Sm_S'$ & $g^p_{eff}$    & $g^v_{eff}$ \\ \hline
+     \multirow{6}{*}{+1} & \multirow{3}{*}{+1} & 0     & 1     & 2               & \multirow{3}{*}{+1} & -1     & 1      & 1                 & 2              & 1           \\ 
+                         &                     & 1     & 0     & 1               &                     & 0      & 0      & 0                 & 1              & 1           \\ 
+                         &                     & 2     & -1    & 0               &                     & 1      & -1     & -1                & 0              & 1           \\ \cline{2-11}
+                         & \multirow{3}{*}{+1} & -1    & 1     & 1               & \multirow{3}{*}{+1} & -2     & 1      & 0                 & $\frac{5}{2}$  & 1           \\ 
+                         &                     & 0     & 0     & 0               &                     & -1     & 1      & -1                & $\frac{3}{2}$  & 1           \\ 
+                         &                     & 1     & -1    & -1              &                     & 0      & -1     & -2                & $\frac{1}{2}$  & 1           \\ \hline
+     \multirow{6}{*}{0}  & \multirow{3}{*}{+1} & 0     & 1     & 2               & \multirow{3}{*}{+1} & 0      & 1      & 2                 & $\frac{1}{2}$  & 0           \\ 
+                         &                     & 1     & 0     & 1               &                     & 1      & 0      & 1                 & $-\frac{1}{2}$ & 0           \\ 
+                         &                     & 2     & -1    & 0               &                     & 2      & -1     & 0                 & $-\frac{3}{2}$ & 0           \\ \cline{2-11}
+                         & \multirow{3}{*}{+1} & -2    & 1     & 0               & \multirow{3}{*}{+1} & -2     & -1     & 0                 & $\frac{3}{2}$  & 0           \\ 
+                         &                     & -1    & 0     & -1              &                     & -1     & 0      & -1                & $\frac{1}{2}$  & 0           \\ 
+                         &                     & 0     & -1    & -2              &                     & 0      & -1     & -2                & $-\frac{1}{2}$ & 0           \\ \hline
+     \multirow{6}{*}{-1} & \multirow{3}{*}{+1} & -1    & 1     & 1               & \multirow{3}{*}{+1} & 0      & 1      & 2                 & $-\frac{1}{2}$ & -1          \\ 
+                         &                     & 0     & 0     & 0               &                     & 1      & 0      & 1                 & $-\frac{3}{2}$ & -1          \\ 
+                         &                     & 1     & 1     & -1              &                     & 2      & -1     & 0                 & $-\frac{5}{2}$ & -1          \\ \cline{2-11}
+                         & \multirow{3}{*}{+1} & -2    & 1     & 0               & \multirow{3}{*}{+1} & -1     & 1      & 1                 & 0              & -1          \\ 
+                         &                     & -1    & 0     & -1              &                     & 0      & 0      & 0                 & -1             & -1          \\ 
+                         &                     & 0     & -1    & -2              &                     & 1      & -1     & -1                & -2             & -1          \\ \hline
+    \end{tabular}
+    \caption{Aufspaltung nach Paschen-Back}
+  \end{center}
+\end{table}
 
 \section{Bestimmung des Bohrschen Magnetons}
 
@@ -489,9 +541,9 @@ $\Delta \alpha_2$ ist für 405 nm 2 bzw. 4, da hier aufgrund der guten Ablesbark
   \begin{tabular}{|p{2cm}|p{4cm}|p{2cm}|p{2cm}|}
     \hline
     Übergang & $< \mu_B >$ in $10^{-24}~ \frac{J}{T}$ & $\sigma_{\mu_B}$ & $\sigma_{\mu_B}$ in \% \\ \hline
-    405               & 8,923 & 0,211 & 2,37  \\ \hline
-    436               & 9,512 & 0,1 & 1,05  \\ \hline
-    546               & 9,052 & 1,085 & 1,2  \\ \hline
+    405      & 8,923                                  & 0,211            & 2,37                   \\ \hline
+    436      & 9,512                                  & 0,1              & 1,05                   \\ \hline
+    546      & 9,052                                  & 1,085            & 1,2                    \\ \hline
     \end{tabular}
 \end{center}
 
