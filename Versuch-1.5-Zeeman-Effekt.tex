@@ -307,13 +307,17 @@ so gelten folgende Auswahlregen:
 
 Der Versuchsaufbau besteht aus einer in einem Magnetfeld angebrachten
 Lichtquelle, gefolgt von einem Linsensystem zur Kollimierung des Lichtes. Der
-Farbfilter erlaubt es uns, aus dem emmitierten Licht gezielt einzelne
+Farbfilter erlaubt es uns, aus dem emittierten Licht gezielt einzelne
 Spektrallinien zu isolieren, was eine Beobachtung diskreter Übergänge mit Hilfe
-des Fabrey-Pérot-Interferometers ermöglicht. Das vom Interferometer erzeugte
+des Fabry-Pérot-Interferometers ermöglicht. Das vom Interferometer erzeugte
 Interferenzmuster wird mit Hilfer einer CCD-Kamera aufgenommen und auf einem
 Bildschirm in Graustufen abgebildet. Zur Überprüfung der klassischen Vorhersage
 können zusätzlich noch ein $\frac{\lambda}{4}$ -Plättchen gefolgt von einem
 Linearpolarisator im Strahlengang montiert werden.
+
+\section{Messungen mit der Heliumlampe}
+
+Wir verwenden zunächst die Heliumlampe und einen 588 nm Farbfilter. Dies entspricht einem Übergang  $3^3 D_{1} -> 2^3 P_{1}$. Zu beobachten ist eine Aufspaltung in 3 Linien, unabhängig von der Magnetfeldstärke. Auf diese Beobachtung wird im Rahmen der Überprüfung der quantenmechanischen Vorhersage später genau eingegangen.
 
 \section{Messung von $\frac{\delta\alpha_1}{\Delta g_{eff} \delta\alpha_2}$}
 
@@ -352,7 +356,7 @@ eingestellt, dass sich Spektrallinien von benachbarten Interferenzordnungen
      \caption{Linienspektrum bei Verwendung des 436 nm Filters. Da die einzelnen
        Spektrallinien bei der oberen Einstellung nicht klar voneinander zu
        unterscheiden waren, wurde für die Messung lediglich die untere
-       Eisntellung verwendet.}
+       Einstellung verwendet.}
   \label{fig:436nmlines}
 \end{figure}
 
@@ -412,75 +416,9 @@ Analog bestätigt sich das klassische Modell für den Fall des longitudinalen Ze
 
 \section{Überprüfung der Vorhersagen der quantenmechanischen Erklärung}
 
-Um unsere Messdaten auswerten zu können, sind zunächst einige theoretische Vorüberlegungen notwendig. Als erstes berechnen wir die gyromagnetischen Faktoren der beteiligten Energieniveaus und tragen sie tabellarisch auf: 
+\subsection{Aufspaltung des $3^3 D_{1} -> 2^3 P_{1}$ Helium-Übergangs nach Zeeman und Paschen-Back}
 
-\begin{center}
-  \begin{tabular}{|p{2.2cm}|p{4cm}|p{2cm}|p{2cm}|}
-    \hline
-    Übergang                    & Wellenlänge in nm & $g_J$ & $g_J'$        \\ \hline
-    $2^3S_1~\rightarrow~2^3P_0$ & 405               & 2     & -             \\ \hline
-    $2^3S_1~\rightarrow~2^3P_1$ & 436               & 2     & $\frac{3}{2}$ \\ \hline
-    $2^3S_1~\rightarrow~2^3P_2$ & 546               & 2     & $\frac{3}{2}$ \\ \hline
-	\end{tabular}
-\end{center}
-
-Zeichnerisch lassen sich die erlaubten Übergänge unter Berücksichtung der Auswahlregeln in folgenden Termschemata darstellen:
-
-\begin{figure}[H] 
-  \centering
-     \includegraphics[width=1\textwidth]{data/Termschemata.JPG}
-  \caption{Termschemata für alle drei Übergänge, oben sind jeweils die Wellenlängen eingeschrieben; verschiedene $\Delta m_J$ sind farblich gekennzeichnet. Verbotene Übergänge sind gestrichelt eingezeichnet.}
-  \label{fig:Bild3}
-\end{figure}
-
-Die $g_{eff}$-Werte lassen sich leicht gemäß $g_{eff} = g_J M_J - g_J' M_J'$ berechnen und sind in folgenden Tabellen für jeden Übergang dargestellt, jeweils unterteilt in die möglichen Werte von $\Delta m_J$, also für die Änderung der magnetischen Gesamtdrehimpulsquantenzahl, die die möglichen Raumrichtungen des Drehimpulses angibt. Zunächst für 405 nm (hier ergeben sich drei Linien):
-
-\begin{center}
-  \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
-    \hline
-    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
-    1            & -1    & 0      & 2         \\ \hline
-    0            & 0     & 0      & 0         \\ \hline
-    -1           & 1     & 0      & -2        \\ \hline
-	\end{tabular}
-\end{center}
-
-Für 436 nm sind es 6 Linien:
-
-\begin{center}
-  \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
-    \hline
-    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$      \\ \hline
-    1            & -1    & 0      & -2             \\ \hline
-    1            & 0     & 1      & $-\frac{3}{2}$ \\ \hline
-    0            & -1    & -1     & $-\frac{1}{2}$ \\ \hline
-    0            & 1     & 1      & $\frac{1}{2}$  \\ \hline
-   -1            & 0     & -1     & $\frac{3}{2}$  \\ \hline    
-   -1            & 1     & 0      & 2              \\ \hline
-    \end{tabular}
-\end{center}
-
-Für 546 nm ergeben sich sogar 9 Linien:
-
-\begin{center}
-  \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
-    \hline
-    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$      \\ \hline
-    1            & -1    & 0      & -2             \\ \hline
-    1            & 0     & 1      & $-\frac{3}{2}$ \\ \hline
-    1            & 1     & 2      & -1             \\ \hline
-    0            & -1    & -1     & $-\frac{1}{2}$ \\ \hline
-    0            & 0     & 0      & 0              \\ \hline
-    0            & 1     & 1      & $\frac{1}{2}$  \\ \hline
-    -1           & -1    & -2     & 1              \\ \hline
-    -1           & 0     & -1     & $\frac{3}{2}$  \\ \hline
-    -1           & 1     & 0      & 2              \\ \hline
-    \end{tabular}
-\end{center}
-
-
-
-\subsection{Aufspaltung des $3^3 D_{1} -> 2^3 P_{1}$ Übergangs nach Zeeman und Paschen-Back}
+Wir untersuchen nun die Aufspaltung des $3^3 D_{1} -> 2^3 P_{1}$ Übergangs von Helium (588 nm). Gemäß $g_{eff} = g_J M_J - g_J' M_J'$ lassen sich die Werte für $g_{eff}$ berechnen:
 
 \begin{table}[H]
   \begin{center}
@@ -528,6 +466,77 @@ Für 546 nm ergeben sich sogar 9 Linien:
     \caption{Aufspaltung nach Paschen-Back}
   \end{center}
 \end{table}
+
+Die Energien der Aufspaltungen ergibt sich in beiden Fällen zu $\Delta E = \mu _B \cdot B \cdot g_{eff}$. Da wir aber nur 3 Linien beobachten, kann hier nur der Paschen-Back-Effekt auftreten. Die Erklärung hierfür ist das Erdmagnetfeld, dessen Stärke bei Helium bereits ausreicht, um die L-S-Kopplung aufzuheben. Da die Kernladungszahl (Z = 2 für Helium) in der vierten Potenz in die L-S-Kopplungsenergie eingeht, ist sie beim Quecksilber (Z = 80) um ein Vielfaches höher und wir können daher nur mit der Quecksilberdampflampe auch den Zeeman-Effekt beobachten. Um ihn mit der Heliumlampe beobachten zu können, wäre eine aufwendige Magnetfeldabschirmung notwendig.
+
+\subsection{Messungen mit der Quecksilberdampflampe}
+
+Um unsere Messdaten auswerten zu können, sind zunächst einige theoretische Vorüberlegungen notwendig. Als erstes berechnen wir die gyromagnetischen Faktoren der beteiligten Energieniveaus und tragen sie tabellarisch auf: 
+
+\begin{center}
+  \begin{tabular}{|p{2.2cm}|p{4cm}|p{2cm}|p{2cm}|}
+    \hline
+    Übergang                    & Wellenlänge in nm & $g_J$ & $g_J'$        \\ \hline
+    $2^3S_1~\rightarrow~2^3P_0$ & 405               & 2     & -             \\ \hline
+    $2^3S_1~\rightarrow~2^3P_1$ & 436               & 2     & $\frac{3}{2}$ \\ \hline
+    $2^3S_1~\rightarrow~2^3P_2$ & 546               & 2     & $\frac{3}{2}$ \\ \hline
+	\end{tabular}
+\end{center}
+
+Zeichnerisch lassen sich die erlaubten Übergänge unter Berücksichtung der Auswahlregeln in folgenden Termschemata darstellen:
+
+\begin{figure}[H] 
+  \centering
+     \includegraphics[width=1\textwidth]{data/Termschemata.JPG}
+  \caption{Termschemata für alle drei Übergänge, oben sind jeweils die Wellenlängen eingeschrieben; verschiedene $\Delta m_J$ sind farblich gekennzeichnet. Verbotene Übergänge sind gestrichelt eingezeichnet.}
+  \label{fig:Bild3}
+\end{figure}
+
+Die $g_{eff}$-Werte lassen sich leicht wie im vorigen Abschnitt berechnen und sind in folgenden Tabellen für jeden Übergang dargestellt, jeweils unterteilt in die möglichen Werte von $\Delta m_J$, also für die Änderung der magnetischen Gesamtdrehimpulsquantenzahl, die die möglichen Raumrichtungen des Drehimpulses angibt. Zunächst für 405 nm (hier ergeben sich drei Linien):
+
+\begin{center}
+  \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+    \hline
+    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$ \\ \hline
+    1            & -1    & 0      & 2         \\ \hline
+    0            & 0     & 0      & 0         \\ \hline
+    -1           & 1     & 0      & -2        \\ \hline
+	\end{tabular}
+\end{center}
+
+Für 436 nm sind es 6 Linien:
+
+\begin{center}
+  \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+    \hline
+    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$      \\ \hline
+    1            & -1    & 0      & -2             \\ \hline
+    1            & 0     & 1      & $-\frac{3}{2}$ \\ \hline
+    0            & -1    & -1     & $-\frac{1}{2}$ \\ \hline
+    0            & 1     & 1      & $\frac{1}{2}$  \\ \hline
+   -1            & 0     & -1     & $\frac{3}{2}$  \\ \hline    
+   -1            & 1     & 0      & 2              \\ \hline
+    \end{tabular}
+\end{center}
+
+Für 546 nm ergeben sich sogar 9 Linien:
+
+\begin{center}
+  \begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+    \hline
+    $\Delta m_J$ & $m_J$ & $m_J'$ & $g_{eff}$      \\ \hline
+    1            & -1    & 0      & -2             \\ \hline
+    1            & 0     & 1      & $-\frac{3}{2}$ \\ \hline
+    1            & 1     & 2      & -1             \\ \hline
+    0            & -1    & -1     & $-\frac{1}{2}$ \\ \hline
+    0            & 0     & 0      & 0              \\ \hline
+    0            & 1     & 1      & $\frac{1}{2}$  \\ \hline
+    -1           & -1    & -2     & 1              \\ \hline
+    -1           & 0     & -1     & $\frac{3}{2}$  \\ \hline
+    -1           & 1     & 0      & 2              \\ \hline
+    \end{tabular}
+\end{center}
+
 
 \section{Bestimmung des Bohrschen Magnetons}
 
